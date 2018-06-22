@@ -27,4 +27,4 @@ hits from view 1 are diplayed as smaller red spheres
 
 In progress the viewer will be able to read and display MC events too. You can hover the mouse over the track and it displays some basic information (event number, track ID, number of hits)
 
-![alt text](EventDisplays/VTK/VTKEventViewer/VTKViewer.png)
+![alt text](https://github.com/WA105/EventDisplays/VTK/VTKEventViewer/VTKViewer.png)
