@@ -1,2 +1,4 @@
 # EventDisplays
-This repository is for the event displays for the dual phase prototype. 
+This repository contains some event displays for the Dual-Phase LArTPC prototypes. 
+## VTK 
+(comments here on VTK evd)
