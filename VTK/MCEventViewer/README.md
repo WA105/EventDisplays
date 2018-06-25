@@ -28,7 +28,9 @@ take one file from the g4detsim repo and the corresponding file from the recofas
 You know the correspondance of the files by their prefix number 
 
 Example with files number 0:
+
 0-RecoFast-Parser.hdf5 (is the reconstruced MC)
+
 0-G4Detsim-Parser.hdf5 (is the corresponding truth MC file)
 
 Now you should be ready to execute:
