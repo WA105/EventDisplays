@@ -4,6 +4,7 @@ This repository contains some event displays for the Dual-Phase LArTPC prototype
 Reads an event from the 3x1x1 LAr TPC (in hdf5 format) and shows the 3D reconstructed hits. Commes in two seperate versions and folders for MC:
 
 Installation and execution in the [README](VTK/MCEventViewer/README.md)
+![alt text](VTK/MCEventViewer/VTKMCViewer2.png)
 
 for data:
 
