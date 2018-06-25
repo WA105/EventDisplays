@@ -41,4 +41,4 @@ hits from view 1 are diplayed as smaller red spheres
 Monte Carlo tracks are represented as lines (purple is muons, black is neutrons, mint are gammas, yellow for electrons, lavender for pions)
 You can hover the mouse over the reconstructed hits or MC_tracks to display some basic information (event number, track ID, number of hits, MC momentum, ..)
 
-![alt text](MVViewer.png)
+![alt text](MCViewer.png)
