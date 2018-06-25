@@ -42,9 +42,11 @@ If you don't want to diplay the truth MC simply remove the MC truth file:
 
 $ python 311MCViewer.py -file MC5-Reco.hdf5 -ev_range 0 10
 
-hits from view 0 are diplayed as large blue spheres
-hits from view 1 are diplayed as smaller red spheres
+hits from view 0 are displayed as large blue spheres
+hits from view 1 are displayed as smaller red spheres
+
 Monte Carlo tracks are represented as lines (purple is muons, black is neutrons, mint are gammas, yellow for electrons, lavender for pions)
-You can hover the mouse over the reconstructed hits or MC_tracks to display some basic information (event number, track ID, number of hits, MC momentum, ..)
+
+You can hover the mouse over the reconstructed hits or MC_tracks to display some basic information (event number, track ID, number of hits, MC momentum, ..). You can also click on the track (or hits) to highlight them in red.
 
 ![alt text](MCViewer.png)
