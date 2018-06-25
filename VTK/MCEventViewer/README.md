@@ -14,11 +14,14 @@ $ pip install h5py
 You need to download the 3x1x1.obj geometry which is 130MB and copy it to your local directory. Get it from [Dropbox](https://www.dropbox.com/s/lvsrrz614z7fotb/3x1x1-full.vtk?dl=0) or [EOS]()
 
 Input Files (MC):
+
 The MC reconstructed data and truth_MC data are stored in seperate files on EOS.
 See the WA015 [Tiwki](https://twiki.cern.ch/twiki/bin/view/Sandbox/RecoData3x1x1)
 
 latest MC files are stored there:
+
 $ls /eos/experiment/wa105/offline/LArSoft/MC/MC5/HDF5/
+
 g4detsim  recofast  recofull
 
 take one file from the g4detsim repo and the corresponding file from the recofast repo
