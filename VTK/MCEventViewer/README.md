@@ -25,7 +25,8 @@ $ls /eos/experiment/wa105/offline/LArSoft/MC/MC5/HDF5/
 g4detsim  recofast  recofull
 
 take one file from the g4detsim repo and the corresponding file from the recofast repo
-You know the correspondance of the files by there prefic number 
+You know the correspondance of the files by their prefix number 
+
 Example with files number 0:
 0-RecoFast-Parser.hdf5 (is the reconstruced MC)
 0-G4Detsim-Parser.hdf5 (is the corresponding truth MC file)
