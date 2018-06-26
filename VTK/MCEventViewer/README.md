@@ -42,6 +42,12 @@ If you don't want to diplay the truth MC simply remove the MC truth file:
 
 $ python 311MCViewer.py -file MC5-Reco.hdf5 -ev_range 0 10
 
+if you wan't help on the arguments
+
+$ phyton 311MCViewer.py -h
+
+you can disable neutrons or gammas with the -no_neutrons or -no_gammas arguments
+
 hits from view 0 are displayed as large blue spheres
 hits from view 1 are displayed as smaller red spheres
 
