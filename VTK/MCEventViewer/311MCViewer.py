@@ -40,6 +40,8 @@ parser.add_argument("-ev", help="specify the event number")
 parser.add_argument("-trk_length", help="cut on on track length in cm (show only tracks with length greater than cut)")
 parser.add_argument("-ev_range", nargs=2, help="specify a range of events example -ev 10 100 returns all events between 10 and 100") # not implement yet
 parser.add_argument("-ev_all", action="store_true")
+parser.add_argument("-no_neutrons", action="store_true")
+parser.add_argument("-no_gammas", action="store_true")
 parser.add_argument("--verbosity", help="increase output verbosity")
 args=parser.parse_args()
 if args.ev and args.ev_range:
@@ -338,13 +340,15 @@ for i in range(3):
                     renderer[i].AddActor(glyphActor_MC_electron[ipart])
                     balloonWidget.AddBalloon(glyphActor_MC_electron[ipart],str(ListElectronInfo[ipart]))
 
-                for ipart in range(len(glyphActor_MC_gamma)):
-                    renderer[i].AddActor(glyphActor_MC_gamma[ipart])
-                    balloonWidget.AddBalloon(glyphActor_MC_gamma[ipart],str(ListGammaInfo[ipart]))
+                if not args.no_gammas:
+                        for ipart in range(len(glyphActor_MC_gamma)):
+                                renderer[i].AddActor(glyphActor_MC_gamma[ipart])
+                                balloonWidget.AddBalloon(glyphActor_MC_gamma[ipart],str(ListGammaInfo[ipart]))
 
-                for ipart in range(len(glyphActor_MC_neutron)):
-                    renderer[i].AddActor(glyphActor_MC_neutron[ipart])
-                    balloonWidget.AddBalloon(glyphActor_MC_neutron[ipart],str(ListNeutronInfo[ipart]))
+                if not args.no_neutrons:
+                    for ipart in range(len(glyphActor_MC_neutron)): 
+                        renderer[i].AddActor(glyphActor_MC_neutron[ipart])
+                        balloonWidget.AddBalloon(glyphActor_MC_neutron[ipart],str(ListNeutronInfo[ipart]))
             
         renderer[i].GradientBackgroundOn()
         renderer[i].SetBackground(1,1,1)
@@ -359,13 +363,15 @@ for i in range(3):
             
         if i==1:
             camera[i].ParallelProjectionOn()
-            camera[i].SetParallelScale(1000.0) # distance of camera  from the focal point
-            camera[i].SetPosition(0.0, 1.0,-500.0)
+            camera[i].SetParallelScale(1500.0) 
+            camera[i].SetClippingRange(0.1,3000)# depth of parrellel integration  from the parralel scale
+            camera[i].SetPosition(0.0, -1500.0, -500.0)
             camera[i].SetViewUp(0.0, 0.0, 1.0)
         
         if i==2:
             camera[i].ParallelProjectionOn()
-            camera[i].SetParallelScale(1500.0) # camera is 1500 mm away from the focal point
+            camera[i].SetParallelScale(1000.0) # camera is 1500 mm away from the focal point
+            camera[i].SetClippingRange(0.1,3000)
             camera[i].SetPosition(500.0, 0.0,-500.0)
             camera[i].SetViewUp(0.0, 0.0, 1.0)
             
